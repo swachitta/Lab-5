@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>visibility of image</title>
+</head>
+<body>
+	<img id="myid" src="my.jpg" width="300px" alt="it contains my photo">
+		<button onclick="hideimg()">hide</button>
+	<button onclick="showimg()">show</button>
+	
+<script type="text/javascript">
+	function hideimg() {
+		document.getElementById('myid').style.visibility="hidden";
+	}
+	function showimg() {
+		document.getElementById('myid').style.visibility="visible";
+	}
+</script>

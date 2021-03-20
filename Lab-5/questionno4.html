@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Drag and Drop</title>
+</head>
+<body>
+	<span style="position: absolute;
+	top:100px;
+	left:50px;
+	background-color:grey";
+	onmousedown="grabber(event);">HTML</span>
+<span style="position: absolute;
+	top:100px;
+	left:100px;
+	background-color:blue";
+	onmousedown="grabber(event);">PHP</span>
+	<span style="position: absolute;
+	top:100px;
+	left:100px;
+	background-color:pink";
+	onmousedown="grabber(event);">CSS</span>
+	<script type="text/javascript">
+		var element;
+		function grabber(evt){
+			element=evt.currentTarget;
+			document.addEventListener("mousemove",mover,true);
+			document.addEventListener("mouseup",dropper,true);
+		}
+
+		function mover(evt)
+		{
+			element.style.left=event.clientX+"px";
+			element.style.up=event.clientY+"px";
+
+		}
+		function dropper(evt)
+		{
+			document.removeEventListener("mousetop",dropper,true);
+			document.removeEventlistener("mousemove",mover,true);
+		}
+
+</script>
+</body>
+</html>
+	</script>
+</body>
+</html>
